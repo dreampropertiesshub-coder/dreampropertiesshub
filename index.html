@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dream Properties Hub | Real Estate Insights, Projects &amp; Property News</title>
+  <meta name="description" content="Dream Properties Hub publishes real estate insights, project updates and property news to help you make confident property decisions.">
+  <link rel="canonical" href="%SITE_URL%/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Dream Properties Hub">
+  <meta property="og:title" content="Dream Properties Hub | Real Estate Insights, Projects &amp; Property News">
+  <meta property="og:description" content="Real estate insights, project updates and property news.">
+  <meta property="og:url" content="%SITE_URL%/">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Dream Properties Hub","url":"%SITE_URL%/"}</script>
+</head>
+<body data-page="home">
+<!--include:header-->
+
+<main id="main">
+  <section class="hero">
+    <div class="container hero-inner">
+      <p class="eyebrow">Dream Properties Hub</p>
+      <h1>Real Estate Insights, Projects &amp; Property News</h1>
+      <p class="hero-sub">Practical guides, project updates and market news to help you buy, sell and invest with confidence.</p>
+      <a class="btn" href="#blogs">Read the Latest Blogs</a>
+    </div>
+  </section>
+
+  <section id="blogs" class="section" aria-labelledby="blogs-title">
+    <div class="container">
+      <div class="section-head">
+        <h2 id="blogs-title" class="section-title">Latest Blogs</h2>
+        <form id="search-form" class="search" role="search" autocomplete="off">
+          <label class="sr-only" for="search-input">Search blogs</label>
+          <input id="search-input" type="search" name="q" placeholder="Search blogs by title or content" maxlength="80">
+          <button class="btn btn-small" type="submit">Search</button>
+        </form>
+      </div>
+
+      <p id="post-status" class="post-status" role="status" aria-live="polite"></p>
+      <div id="post-grid" class="grid" aria-busy="true"></div>
+      <div class="load-more-wrap">
+        <button id="load-more" class="btn btn-outline" type="button" hidden>Load More</button>
+      </div>
+      <noscript><p class="notice">Please enable JavaScript to browse blog posts.</p></noscript>
+    </div>
+  </section>
+</main>
+
+<!--include:footer-->
+<script src="/assets/js/config.js"></script>
+<script src="/assets/js/common.js"></script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

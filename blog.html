@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--SEO_HEAD--><title>Blog | Dream Properties Hub</title>
+  <meta name="robots" content="noindex"><!--/SEO_HEAD-->
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body data-page="blog">
+<!--include:header-->
+
+<!--
+  TEMPLATE FOR EVERY BLOG POST.
+  On the live site the Netlify function (netlify/functions/post.js) fills in the
+  head tags and the article below on the server, so search engines see everything.
+  If the function is unavailable (e.g. plain local preview) blog.js renders the post in the browser instead.
+-->
+<main id="post-root"><!--POST_HTML--></main>
+
+<!--include:footer-->
+<script src="/assets/js/config.js"></script>
+<script src="/assets/js/common.js"></script>
+<script src="/assets/js/blog.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+[build]
+  command = "node build.js"
+  publish = "dist"
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[functions]
+  node_bundler = "esbuild"
+  included_files = ["dist/blog.html", "dist/404.html"]
+
+# Each blog post is rendered on the server so search engines see the full article.
+[[redirects]]
+  from = "/blog/:slug"
+  to = "/.netlify/functions/post?slug=:slug"
+  status = 200
+
+# Always-fresh sitemap
+[[redirects]]
+  from = "/sitemap.xml"
+  to = "/.netlify/functions/sitemap"
+  status = 200
+  force = true
+
+# Clean URLs
+[[redirects]]
+  from = "/about"
+  to = "/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 200
+
+[[redirects]]
+  from = "/admin"
+  to = "/admin.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"

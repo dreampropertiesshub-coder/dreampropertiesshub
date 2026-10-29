@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us | Dream Properties Hub</title>
+  <meta name="description" content="Get in touch with Dream Properties Hub. Send us a message and we will reply as soon as we can.">
+  <link rel="canonical" href="%SITE_URL%/contact">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Dream Properties Hub">
+  <meta property="og:title" content="Contact Us | Dream Properties Hub">
+  <meta property="og:description" content="Get in touch with Dream Properties Hub.">
+  <meta property="og:url" content="%SITE_URL%/contact">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body data-page="contact">
+<!--include:header-->
+
+<main id="main">
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Contact Us</p>
+      <h1>We would love to hear from you</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container-narrow">
+      <p id="contact-success" class="notice notice-ok" role="status" hidden>Thank you! Your message has been sent. We will get back to you soon.</p>
+
+      <!-- Netlify Forms: submissions appear in Netlify -> Forms (no code needed). -->
+      <form class="form-card" name="contact" method="POST" action="/contact?sent=1" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <p class="hp" aria-hidden="true"><label>Do not fill this out: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+
+        <div class="field">
+          <label for="c-name">Your name</label>
+          <input id="c-name" name="name" type="text" required autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="c-email">Email address</label>
+          <input id="c-email" name="email" type="email" required autocomplete="email">
+        </div>
+        <div class="field">
+          <label for="c-phone">Phone (optional)</label>
+          <input id="c-phone" name="phone" type="tel" autocomplete="tel">
+        </div>
+        <div class="field">
+          <label for="c-message">Message</label>
+          <textarea id="c-message" name="message" rows="6" required></textarea>
+        </div>
+        <button class="btn" type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<!--include:footer-->
+<script src="/assets/js/config.js"></script>
+<script src="/assets/js/common.js"></script>
+<script>
+  if (/[?&]sent=1/.test(location.search)) {
+    document.getElementById('contact-success').hidden = false;
+    var f = document.querySelector('form[name="contact"]');
+    if (f) f.hidden = true;
+  }
+</script>
+</body>
+</html>

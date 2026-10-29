@@ -1,0 +1,11 @@
+{
+  "name": "dream-properties-hub",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Simple real estate blog publishing website (Supabase + Netlify)",
+  "scripts": {
+    "build": "node build.js",
+    "preview": "node build.js && npx netlify-cli dev --dir dist"
+  },
+  "engines": { "node": ">=18" }
+}
